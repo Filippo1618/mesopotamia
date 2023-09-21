@@ -1,0 +1,107 @@
+{% extends "main.html" %} {% block content %}
+<section id="scroll">
+  <header class="py-5 bg-light border-bottom mb-4">
+    <div class="container">
+      <div class="text-center mt-5">
+        <h1 class="fw-bolder">Benvenuto nella pagina di registrazione!</h1>
+        <p class="lead mb-0">
+          A Bootstrap 5 starter layout for your nex log homepage
+        </p>
+      </div>
+    </div>
+  </header>
+  <div class="container m-5">
+    <div class="row">
+      <div class="col-md-8">
+        <form action="createUser/" method="post">
+          {% csrf_token %}
+          <input
+            class="form-control"
+            type="text"
+            name="nome"
+            placeholder="Nome..."
+            required
+          /><br />
+          <input
+            class="form-control"
+            type="text"
+            name="cognome"
+            placeholder="Cognome..."
+          /><br />
+          <input
+            class="form-control"
+            type="text"
+            name="username"
+            placeholder="username..."
+          /><br />
+          <input
+            class="form-control"
+            type="email"
+            name="email"
+            placeholder="E-mail..."
+          /><br />
+          <input
+            class="form-control"
+            type="password"
+            name="password1"
+            placeholder="Inserisci una password..."
+          /><br />
+          <input
+            class="form-control"
+            type="password"
+            name="password2"
+            placeholder="Conferma la password inserita..."
+          /><br />
+          <input
+            class="form-control"
+            type="text"
+            name="azienda"
+            placeholder="Nome azienda (facoltativo)"
+          /><br />
+          <input
+            class="form-control"
+            type="text"
+            name="telefono"
+            placeholder="Numero telefono (facoltativo)"
+          /><br />
+          <textarea
+            class="form-control"
+            name="text"
+            placeholder="Come possiamo aiutarti? (facoltativo)"
+            style="height: 150px"
+          ></textarea>
+          <br />
+          <input
+            class="btn btn-primary"
+            type="submit"
+            value="Registrati"
+          /><br /><br />
+        </form>
+      </div>
+      <div class="col-md-4">
+        <b>Servizio Clienti:</b> <br />
+        Telefono: +0039 333 332110<br />
+        E-mail:
+        <a href="mailto:support@mysite.com">servizioclienti@mesopotamia.com</a
+        ><br />
+        Orario: 9:00 - 20:00 7/7<br />
+        <br /><br />
+        <b>Sede principale:</b><br />
+        Company Inc, <br />
+        Paiete street <br />
+        SNC Maccarese, IT<br />
+        Phone: +333 33323213<br />
+        <a href="mailto:usa@mysite.com">blabla@mysite.com</a><br />
+
+        <br /><br />
+        <b>Sede secondaria:</b><br />
+        Company HK Litd, <br />
+        25/F.168 Queen<br />
+        Wan Chai District, Hong Kong<br />
+        Phone: +852 129 209 291<br />
+        <a href="mailto:hk@mysite.com">blabla@mysite.com</a><br />
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
