@@ -73,7 +73,7 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #0b8607;
+  --bs-link-color: #1cfd24;
   --bs-link-hover-color: #07be4d;
   --bs-code-color: #92ee09;
   --bs-highlight-bg: #fff3cd;
@@ -94,6 +94,10 @@
 .container-full-width {
   position: relative;
   text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.container-full-width.w {
   color: rgb(255, 255, 255);
 }
 
@@ -104,6 +108,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.centeredX {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 
 body {
@@ -3833,6 +3845,7 @@ textarea.form-control-lg {
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
+  text-align: center;
 }
 
 .navbar-toggler {
@@ -3884,7 +3897,7 @@ textarea.form-control-lg {
     flex-direction: row;
   }
   .navbar-expand-sm .navbar-nav .dropdown-menu {
-    position: absolute;
+    position: relative;
   }
   .navbar-expand-sm .navbar-nav .nav-link {
     padding-right: var(--bs-navbar-nav-link-padding-x);
@@ -7535,6 +7548,10 @@ textarea.form-control-lg {
   margin: 3rem !important;
 }
 
+.m-10 {
+  margin: 10rem !important;
+}
+
 .m-auto {
   margin: auto !important;
 }
@@ -7744,6 +7761,21 @@ textarea.form-control-lg {
 .p-5 {
   padding: 3rem !important;
 }
+
+.p-10 {
+  padding: 8rem !important;
+}
+
+.px-10 {
+  padding-right: 8rem !important;
+  padding-left: 8rem !important;
+}
+
+.py-10 {
+  padding-top: 8rem !important;
+  padding-bottom: 8rem !important;
+}
+
 
 .px-0 {
   padding-right: 0 !important;
@@ -10976,3 +11008,114 @@ body, html {
     transition: background-color 0.3s; /* Transizione del colore di sfondo */
 }
 
+/* barra trasparente */
+.navbar {
+  transition: background-color 1.0s ease; /* Aggiungi una transizione di 0.5 secondi */
+  display: flex; /* Imposta il display su flex per allineare gli elementi orizzontalmente */
+  justify-content: center; /* Centra orizzontalmente gli elementi all'interno della barra di navigazione */
+  align-items: center; /* Centra verticalmente gli elementi all'interno della barra di navigazione */
+
+}
+
+/* Navbar trasparente */
+.navbar.navbar-transparent {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar scura */
+.navbar.navbar-dark {
+  background-color: #000;
+}
+
+
+.my-navbar {
+  border-bottom: 1px solid #999; /* Colore grigio (#999) e spessore 1px */
+}
+
+.center-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+
+#sectionImg0,
+#sectionImg1 {
+  background-image: url("/media/images/grano.webp");
+  background-attachment: fixed; /* Questo imposterà l'immagine di sfondo come fissa */
+  background-size: cover; /* Questo assicura che l'immagine di sfondo copra l'intera sezione */
+
+}
+
+.nav-inner-navigation {
+  position: absolute;
+  height: 100%;
+  float: left;
+  right: 15px;
+  left: 15px;
+  text-align: center;
+}
+
+.grey-background{
+  background-color: #f8f8f8;
+}
+
+.rounded-circle-green-border {
+  border: 13px solid #77dd77; /* Colore verde chiaro del bordo */
+  border-radius: 50% 50%; /* Imposta il bordo per essere circolare */
+}
+
+.active-link {
+  font-size: 20%;
+  border-radius: 00%;
+  border-bottom: 3px solid ghostwhite; /* Evidenzia il link con un bordo verde (puoi personalizzare) */
+  border-style: outset;
+}
+
+/* Stile per il contenitore dei servizi */
+.service-container {
+  display: flex; /* Utilizza il layout flessibile */
+  flex-direction: column; /* Allinea i contenuti verticalmente */
+  align-items: center; /* Allinea gli elementi al centro orizzontalmente */
+  text-align: center; /* Allinea il testo al centro */
+}
+
+/* Sovrascrivi gli stili predefiniti dei link */
+.service-link {
+  text-decoration: none; /* Rimuovi la sottolineatura del testo del link */
+  color: #007bff; /* Imposta il colore del testo del link */
+  /* Aggiungi altri stili desiderati per il link */
+}
+
+.service-link:hover {
+  /* Stile al passaggio del mouse sopra il link */
+  color: #0056b3; /* Cambia il colore del testo al passaggio del mouse */
+  /* Aggiungi altri stili desiderati al passaggio del mouse sopra il link */
+}
+
+.image-container {
+  max-width: 100%; /* Imposta la larghezza massima desiderata */
+  height: 200px; /* Lascia che l'altezza si adatti proporzionalmente */
+  overflow: hidden; /* Nasconde il contenuto in eccesso se l'immagine è più grande */
+  margin: 0 auto; /* Centra il contenitore orizzontalmente sulla pagina */
+}
+
+.ul.b {
+  list-style-position: inside;
+}
+
+.lg-background{
+  background-color: #E0E9D7;
+}
+
+
+.container-marginx{
+  margin-right: 3rem !important;
+  margin-left: 3rem !important;
+}
+
+.withe-text{
+  color: var(--bs-gray-900);
+}
