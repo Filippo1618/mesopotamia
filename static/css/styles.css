@@ -105,6 +105,14 @@
   transform: translate(-50%, -50%);
 }
 
+.centeredX {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
 
 body {
   margin: 0;
@@ -3833,6 +3841,7 @@ textarea.form-control-lg {
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
+  text-align: center;
 }
 
 .navbar-toggler {
@@ -3884,7 +3893,7 @@ textarea.form-control-lg {
     flex-direction: row;
   }
   .navbar-expand-sm .navbar-nav .dropdown-menu {
-    position: absolute;
+    position: relative;
   }
   .navbar-expand-sm .navbar-nav .nav-link {
     padding-right: var(--bs-navbar-nav-link-padding-x);
@@ -10977,21 +10986,87 @@ body, html {
 }
 
 /* barra trasparente */
-.header.header-transparent .inner-nav > ul > li > a.active {
-  color: rgba(255, 255, 255, .7);
-border-bottom: 2px solid #fff;
-padding-bottom: 5px;
+.navbar {
+  transition: background-color 1.0s ease; /* Aggiungi una transizione di 0.5 secondi */
+  display: flex; /* Imposta il display su flex per allineare gli elementi orizzontalmente */
+  justify-content: center; /* Centra orizzontalmente gli elementi all'interno della barra di navigazione */
+  align-items: center; /* Centra verticalmente gli elementi all'interno della barra di navigazione */
+
 }
 
-/* barra bianca */
-.header.header-small .inner-nav > ul > li > a.active 
-{
-   border-bottom: 2px solid #28a745;
-   color: #28a745;
-   padding-bottom: 5px;
+/* Navbar trasparente */
+.navbar.navbar-transparent {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar scura */
+.navbar.navbar-dark {
+  background-color: #000;
 }
 
 
 .my-navbar {
   border-bottom: 1px solid #999; /* Colore grigio (#999) e spessore 1px */
+}
+
+.center-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+
+#sectionImg0,
+#sectionImg1 {
+  background-image: url("/media/images/grano.webp");
+  background-attachment: fixed; /* Questo imposterà l'immagine di sfondo come fissa */
+  background-size: cover; /* Questo assicura che l'immagine di sfondo copra l'intera sezione */
+
+}
+
+.nav-inner-navigation {
+  position: absolute;
+  height: 100%;
+  float: left;
+  right: 15px;
+  left: 15px;
+  text-align: center;
+}
+
+.grey-background{
+  background-color: #f8f8f8;
+}
+
+.rounded-circle-green-border {
+  border: 13px solid #77dd77; /* Colore verde chiaro del bordo */
+  border-radius: 50% 50%; /* Imposta il bordo per essere circolare */
+}
+
+.active-link {
+  font-size: 20%;
+  border: 1px solid green; /* Evidenzia il link con un bordo verde (puoi personalizzare) */
+
+}
+
+/* Stile per il contenitore dei servizi */
+.service-container {
+  display: flex; /* Utilizza il layout flessibile */
+  flex-direction: column; /* Allinea i contenuti verticalmente */
+  align-items: center; /* Allinea gli elementi al centro orizzontalmente */
+  text-align: center; /* Allinea il testo al centro */
+}
+
+/* Sovrascrivi gli stili predefiniti dei link */
+.service-link {
+  text-decoration: none; /* Rimuovi la sottolineatura del testo del link */
+  color: #007bff; /* Imposta il colore del testo del link */
+  /* Aggiungi altri stili desiderati per il link */
+}
+
+.service-link:hover {
+  /* Stile al passaggio del mouse sopra il link */
+  color: #0056b3; /* Cambia il colore del testo al passaggio del mouse */
+  /* Aggiungi altri stili desiderati al passaggio del mouse sopra il link */
 }
