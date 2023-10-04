@@ -17,4 +17,6 @@ urlpatterns = [
     path('login/login_req/', views.login_req, name="login_req"),
     path('logout/', views.logout_page, name="logout"),
     path('profilo/', views.profilo, name="profilo"),
+    path('servizi_agricoltura/', views.servizi_agricoltura, name="servizi_agricoltura"),
+
 ]

@@ -196,3 +196,7 @@ def unfollow_blogpost(request, id):
         messages.info(request, 'Non stai seguendo questo blogpost.')
 
     return redirect('blogpost_detail', id=id)
+
+def servizi_agricoltura(request):
+    template = loader.get_template('studio_agronomico/servizi_agricoltura.html')
+    return HttpResponse( template.render({},request))
