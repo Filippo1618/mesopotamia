@@ -18,5 +18,9 @@ urlpatterns = [
     path('logout/', views.logout_page, name="logout"),
     path('profilo/', views.profilo, name="profilo"),
     path('servizi_agricoltura/', views.servizi_agricoltura, name="servizi_agricoltura"),
-
+    path('servizi_ambiente/', views.servizi_ambiente, name="servizi_ambiente"),
+    path('servizi_verde/', views.servizi_verde, name="servizi_verde"),
+    path('servizi_attivita/', views.servizi_attivita, name="servizi_attivita"),
+    path('servizi_certificazione/', views.servizi_certificazione, name="servizi_certificazione"),
+    path('servizi_economici/', views.servizi_economici, name="servizi_economici"),
 ]

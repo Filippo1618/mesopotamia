@@ -73,7 +73,7 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #0b8607;
+  --bs-link-color: #1cfd24;
   --bs-link-hover-color: #07be4d;
   --bs-code-color: #92ee09;
   --bs-highlight-bg: #fff3cd;
@@ -94,6 +94,10 @@
 .container-full-width {
   position: relative;
   text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.container-full-width.w {
   color: rgb(255, 255, 255);
 }
 
@@ -7544,6 +7548,10 @@ textarea.form-control-lg {
   margin: 3rem !important;
 }
 
+.m-10 {
+  margin: 10rem !important;
+}
+
 .m-auto {
   margin: auto !important;
 }
@@ -7753,6 +7761,21 @@ textarea.form-control-lg {
 .p-5 {
   padding: 3rem !important;
 }
+
+.p-10 {
+  padding: 8rem !important;
+}
+
+.px-10 {
+  padding-right: 8rem !important;
+  padding-left: 8rem !important;
+}
+
+.py-10 {
+  padding-top: 8rem !important;
+  padding-bottom: 8rem !important;
+}
+
 
 .px-0 {
   padding-right: 0 !important;
@@ -11046,8 +11069,9 @@ body, html {
 
 .active-link {
   font-size: 20%;
-  border: 1px solid green; /* Evidenzia il link con un bordo verde (puoi personalizzare) */
-
+  border-radius: 00%;
+  border-bottom: 3px solid ghostwhite; /* Evidenzia il link con un bordo verde (puoi personalizzare) */
+  border-style: outset;
 }
 
 /* Stile per il contenitore dei servizi */
@@ -11069,4 +11093,29 @@ body, html {
   /* Stile al passaggio del mouse sopra il link */
   color: #0056b3; /* Cambia il colore del testo al passaggio del mouse */
   /* Aggiungi altri stili desiderati al passaggio del mouse sopra il link */
+}
+
+.image-container {
+  max-width: 100%; /* Imposta la larghezza massima desiderata */
+  height: 200px; /* Lascia che l'altezza si adatti proporzionalmente */
+  overflow: hidden; /* Nasconde il contenuto in eccesso se l'immagine è più grande */
+  margin: 0 auto; /* Centra il contenitore orizzontalmente sulla pagina */
+}
+
+.ul.b {
+  list-style-position: inside;
+}
+
+.lg-background{
+  background-color: #E0E9D7;
+}
+
+
+.container-marginx{
+  margin-right: 3rem !important;
+  margin-left: 3rem !important;
+}
+
+.withe-text{
+  color: var(--bs-gray-900);
 }

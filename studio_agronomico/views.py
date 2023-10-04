@@ -184,6 +184,7 @@ def follow_blogpost(request, id):
 
     return redirect('blogpost_detail', id=id)
 
+
 @login_required
 def unfollow_blogpost(request, id):
     blogpost = get_object_or_404(BlogPost, id=id)
@@ -197,6 +198,34 @@ def unfollow_blogpost(request, id):
 
     return redirect('blogpost_detail', id=id)
 
+# SERVIZI view
+
 def servizi_agricoltura(request):
     template = loader.get_template('studio_agronomico/servizi_agricoltura.html')
     return HttpResponse( template.render({},request))
+
+
+def servizi_ambiente(request):
+    template = loader.get_template('studio_agronomico/servizi_ambiente.html')
+    return HttpResponse( template.render({},request))
+
+
+def servizi_verde(request):
+    template = loader.get_template('studio_agronomico/servizi_verde.html')
+    return HttpResponse( template.render({},request))
+
+
+def servizi_attivita(request):
+    template = loader.get_template('studio_agronomico/servizi_attivita.html')
+    return HttpResponse( template.render({},request))
+
+def servizi_certificazione(request):
+    template = loader.get_template('studio_agronomico/servizi_certificazione.html')
+    return HttpResponse( template.render({},request))
+
+
+def servizi_economici(request):
+    template = loader.get_template('studio_agronomico/servizi_economici.html')
+    return HttpResponse( template.render({},request))
+
+
