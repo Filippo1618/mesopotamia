@@ -1,23 +1,24 @@
 {% extends "main.html" %}
 {% block content %}
 <!-- Page header with logo and tagline-->
-<header class="py-5 bg-light border-bottom mb-4">
+<section id="news">
+<header class="pt-5 pb-4 bg-light border-bottom">
     <div class="container">
         <div class="text-center my-5">
-            <h1 class="fw-bolder">Welcome to Blog Home!</h1>
-            <p class="lead mb-0">A Bootstrap 5 starter layout for your next blog homepage</p>
+            <h1 class="fw-bolder">Benvenuto nella sezione Bandi & News!</h1>
+            <p class="lead mb-0">Cerca quello che ti serve! Se hai dubbi o problemi contattaci!</p>
         </div>
     </div>
 </header>
 <!-- Page content-->
-<div class="container">
+<div class="container-full-width py-5 px-4 lg-background">
     <div class="row">
         <!-- Blog entries-->
         <div class="col-lg-8">
             <!-- Featured blog post-->
             {% for newPost in newPosts %}
             <div class="card mb-4">
-                <a href="#!">
+                <a href="{% url 'blogpost_detail' id=newPost.id %}">
                     {% if newPost.image %}
                     <img class="card-img-top" src="{{newPost.image.url}}" alt="..." />
                     {% else %}
@@ -28,7 +29,7 @@
                     <div class="small text-muted">January 1, 2023</div>
                     <h2 class="card-title">{{newPost.title}}</h2>
                     <p class="card-text">{{newPost.desc}}</p>
-                    <a class="btn btn-primary" href="{% url 'blogpost_detail' id=newPost.id %}">Read more →</a>
+                    <a class="btn btn-primary" href="{% url 'blogpost_detail' id=newPost.id %}">Leggi di più →</a>
                 </div>
             </div>
             {% endfor %}
@@ -36,7 +37,7 @@
             <div class="row">
                 <!-- Blog post-->
                 {% for post in posts %}
-                <div class="col-lg-6">
+                <div class="col-6">
                     <div class="card mb-4">
                         <a href="#!">
                             {% if post.image %}
@@ -49,7 +50,7 @@
                             <div class="small text-muted">January 1, 2023</div>
                             <h2 class="card-title h4">{{post.title}}</h2>
                             <p class="card-text">{{post.desc}}</p>
-                            <a class="btn btn-primary" href="{% url 'blogpost_detail' id=post.id %}">Read more →</a>
+                            <a class="btn btn-primary" href="{% url 'blogpost_detail' id=post.id %}">Leggi di più →</a>
                         </div>
                     </div>
                 </div>
@@ -77,7 +78,7 @@
                 <div class="card-body">
                     <div class="input-group">
                         <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
-                        <button class="btn btn-primary" id="button-search" type="button">Go!</button>
+                        <button class="btn btn-primary" id="button-search" type="button">Cerca</button>
                     </div>
                 </div>
             </div>
@@ -111,4 +112,5 @@
         </div>
     </div>
 </div>
+</section>
 {% endblock  %}

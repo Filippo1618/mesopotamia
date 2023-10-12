@@ -32,12 +32,13 @@ class BlogPost(models.Model):
     ]
 
     title = models.CharField(max_length=255, blank=False, null=False)
-    desc = models.TextField(max_length=600, blank=False, null=False)
+    desc = models.TextField(max_length=2500, blank=False, null=False)
     type = models.CharField(max_length=10, choices=TYPE_CHOICES, default="altro", null= False)
     value = models.IntegerField(null=False, blank=False)
     new = models.BooleanField(default=True)
     active = models.BooleanField(default=False)
     image = models.ImageField(upload_to='images', null=True, blank=True )
+    ref_link = models.CharField(max_length=150, blank=True, null=True)
 
     # Nuovo campo per tenere traccia dei follower
     followers = models.ManyToManyField(User, related_name='following', blank=True)

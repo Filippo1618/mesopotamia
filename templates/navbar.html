@@ -3,17 +3,17 @@
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom my-navbar fixed-top mb-5" style="background: transparent;">
     <div class="container-fluid px-5">
         <div class="d-md-flex align-items-center">
-            <a class="navbar-brand" href="#page-top">AgriPro Consulting</a>
+            <a class="navbar-brand" href="#page-top">Studio AgriPro</a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="container-full-width centered collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto center-items ">
-                <li class="nav-item"><a class="nav-link" href="#home" data-section="home" >Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#chi_siamo" data-section="chi_siamo">Chi siamo</a></li>
-                <li class="nav-item"><a class="nav-link" href="#servizi" data-section="servizi" >Servizi</a></li>
-                <li class="nav-item"><a class="nav-link" href="#lavora_con_noi" data-section="lavora_con_noi" >Lavora con noi</a></li>
-                <!--<li class="nav-item"><a class="nav-link" href="{% url 'news' %}">News</a></li>-->
-                <li class="nav-item"><a class="nav-link" href="#contatti" data-section="contatti">Contatti</a></li>
+                <li class="nav-item"><a class="nav-link" href="#home" data-section="home" data-url="{% url 'index' %}#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#chi_siamo" data-section="chi_siamo" data-url="{% url 'index' %}#chi_siamo">Chi siamo</a></li>
+                <li class="nav-item"><a class="nav-link" href="#servizi" data-section="servizi" data-url="{% url 'index' %}#servizi" >Servizi</a></li>
+                <li class="nav-item"><a class="nav-link" href="#news" data-section="news" data-url="{% url 'index' %}#news" >News</a></li>
+                <li class="nav-item"><a class="nav-link" href="#lavora_con_noi" data-section="lavora_con_noi" data-url="{% url 'index' %}#lavora_con_noi" >Lavora con noi</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contattaci" data-section="contattaci" data-url="{% url 'index' %}#contatti">Contattaci</a></li>
                 <!-- <li class="nav-item"><a class="nav-link" href="{% url 'login'%}">LogIn</a></li> -->
                 <!-- <li class="nav-item"><a class="nav-link" href="{% url 'registrazione' %}">Registrati</a></li> -->
             </ul>

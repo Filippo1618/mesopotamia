@@ -2,8 +2,18 @@ document.addEventListener('DOMContentLoaded', function () {
   var navbar = document.querySelector('.navbar');
   var sections = document.querySelectorAll('section'); // Seleziona tutte le sezioni
   var threshold = 70; // Soglia in pixel
+  const currentPath = window.location.pathname;
 
-  
+  console.log("currentPath:" + currentPath);
+
+  if (currentPath !== '/'){
+    var links = navbar.querySelectorAll('a[data-url]');
+    links.forEach(function (link) {
+        var url = link.getAttribute('data-url');
+        link.href = url;
+        });
+  }
+
   window.addEventListener('scroll', function () {
       var currentSection = null; // Inizializza la sezione corrente come nulla
       
@@ -13,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
           var sectionBottom = section.getBoundingClientRect().bottom;
           
           if (sectionTop <= 0 && sectionBottom > 0) {
-              console.log('prova');
               currentSection = section; // Imposta la sezione corrente
           }
       });
