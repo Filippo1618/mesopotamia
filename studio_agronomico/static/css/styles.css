@@ -7762,6 +7762,20 @@ textarea.form-control-lg {
   padding: 3rem !important;
 }
 
+.p-8 {
+  padding: 6rem !important;
+}
+
+.py-8 {
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
+}
+
+.px-8 {
+  padding-right: 6rem !important;
+  padding-left: 6rem !important;
+}
+
 .p-10 {
   padding: 8rem !important;
 }
@@ -7861,6 +7875,14 @@ textarea.form-control-lg {
   padding-top: 3rem !important;
 }
 
+.pt-8 {
+  padding-top: 6rem !important;
+}
+
+.pt-10 {
+  padding-top: 8rem !important;
+}
+
 .pe-0 {
   padding-right: 0 !important;
 }
@@ -7907,6 +7929,14 @@ textarea.form-control-lg {
 
 .pb-5 {
   padding-bottom: 3rem !important;
+}
+
+.pb-8 {
+  padding-bottom: 6rem !important;
+}
+
+.pb-10 {
+  padding-bottom: 8rem !important;
 }
 
 .ps-0 {
@@ -11085,13 +11115,13 @@ body, html {
 /* Sovrascrivi gli stili predefiniti dei link */
 .service-link {
   text-decoration: none; /* Rimuovi la sottolineatura del testo del link */
-  color: #007bff; /* Imposta il colore del testo del link */
+  color: #77dd77; /* Imposta il colore del testo del link */
   /* Aggiungi altri stili desiderati per il link */
 }
 
 .service-link:hover {
   /* Stile al passaggio del mouse sopra il link */
-  color: #0056b3; /* Cambia il colore del testo al passaggio del mouse */
+  color: #64BF6A; /* Cambia il colore del testo al passaggio del mouse */
   /* Aggiungi altri stili desiderati al passaggio del mouse sopra il link */
 }
 
@@ -11110,7 +11140,6 @@ body, html {
   background-color: #E0E9D7;
 }
 
-
 .container-marginx{
   margin-right: 3rem !important;
   margin-left: 3rem !important;
@@ -11118,4 +11147,25 @@ body, html {
 
 .withe-text{
   color: var(--bs-gray-900);
+}
+
+.row-3d {
+  background-color: #f0f0f0; /* Grigio chiaro come sfondo */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Ombra leggera */
+  padding: 20px; /* Aggiungi spazio interno per l'effetto in 3D */
+  border-radius: 10px; /* Bordi arrotondati per un aspetto 3D */
+}
+
+.ul.clean-list{
+  list-style: none;
+}
+
+.truncate-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Aggiunge l'ombra quando il mouse è sopra */
 }

@@ -9,12 +9,23 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from . decorators import login_required_for_registration
+from .models import BlogPost
 
 # Create your views here.
 
 def index(request):
     template = loader.get_template('studio_agronomico/index.html')
-    return HttpResponse( template.render({}, request))
+    
+    #recupero i post in evidenza e no
+    posts = BlogPost.objects.filter(new=False)[:4]
+    newPosts = BlogPost.objects.filter(new=True)[:2]
+
+    context = {
+            'posts' : posts,
+            'newPosts' : newPosts
+        }
+    
+    return HttpResponse( template.render(context, request))
 
 def chi_siamo(request):
     template = loader.get_template('studio_agronomico/chi_siamo.html')
