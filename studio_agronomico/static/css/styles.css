@@ -11059,7 +11059,7 @@ body, html {
 
 
 .my-navbar {
-  border-bottom: 1px solid #999; /* Colore grigio (#999) e spessore 1px */
+  border-bottom: 0px solid #999; /* Colore grigio (#999) e spessore 1px */
 }
 
 .center-items {
@@ -11160,6 +11160,12 @@ body, html {
   list-style: none;
 }
 
+
+.truncate-text-container {
+  max-height: 150px; /* Altezza massima consentita prima della troncatura */
+  overflow: hidden;
+}
+
 .truncate-text {
   white-space: nowrap;
   overflow: hidden;
@@ -11169,3 +11175,5 @@ body, html {
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Aggiunge l'ombra quando il mouse è sopra */
 }
+
+
