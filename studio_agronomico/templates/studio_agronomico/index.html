@@ -190,7 +190,7 @@
         <div class="row">
           {% for newPost in newPosts %}
           <!-- Due colonne sempre a meta della Riga 1 -->
-          <div class="col-6">
+          <div class="col-lg-6 col-md-6 col-sm-12">
             <div class="card mb-4">
                 <a href="{% url 'blogpost_detail' id=newPost.id %}">
                     {% if newPost.image %}
@@ -202,7 +202,7 @@
                 <div class="card-body">
                     <div class="small text-muted">January 1, 2023</div>
                     <h2 class="card-title">{{newPost.title}}</h2>
-                    <p class="card-text truncate-text">{{newPost.desc|truncatechars:150}}</p>
+                    <p class="card-text truncate-text">{{newPost.desc|truncatechars:200}}</p>
                     <a class="btn btn-primary" href="{% url 'blogpost_detail' id=newPost.id %}">Leggi di più →</a>
                 </div>
             </div>
@@ -224,8 +224,8 @@
                 {% endif %}
               </a>
               <div class="card-body">
-                <div class="small text-muted">January 1, 2023</div>
-                <h2 class="card-title h4">{{post.title}}</h2>
+                <div class="small text-muted truncate-text-container">January 1, 2023</div>
+                <h2 class="card-title h4 ">{{post.title}}</h2>
                 <p class="card-text">{{post.desc|truncatechars:50}}</p>
                 <a class="btn btn-primary" href="{% url 'blogpost_detail' id=post.id %}">Leggi di più →</a>
               </div>
