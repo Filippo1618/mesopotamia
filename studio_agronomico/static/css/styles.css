@@ -926,6 +926,7 @@ progress {
 @media (min-width: 576px) {
   .col-sm {
     flex: 1 0 0%;
+    padding: 4%;
   }
   .row-cols-sm-auto > * {
     flex: 0 0 auto;
@@ -11107,7 +11108,7 @@ body, html {
 /* Stile per il contenitore dei servizi */
 .service-container {
   display: flex; /* Utilizza il layout flessibile */
-  flex-direction: column; /* Allinea i contenuti verticalmente */
+  flex-direction: row;  /* Allinea i contenuti verticalmente */
   align-items: center; /* Allinea gli elementi al centro orizzontalmente */
   text-align: center; /* Allinea il testo al centro */
 }

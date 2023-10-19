@@ -80,7 +80,7 @@
 
     <div class="row">
       <!-- Contenuto della riga 1 -->
-      <div class="col-lg-4 col-md-6 col-sm-12 d-flex pb-5 pt-3 flex-column align-items-center justify-content-start service-container">
+      <div class="col-lg-4 col-md-6 col-sm-12 pb-5 pt-3 align-items-center justify-content-start">
         <!-- Contenuto della colonna 1 -->
         <a href="{% url 'servizi_agricoltura' %}" class="service-link">    
           <img
@@ -92,7 +92,7 @@
           <h4 class="mt-4 mx-auto">Servizi per l'agricoltura</h4>
         </a>
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 d-flex pb-5 pt-3 flex-column align-items-center justify-content-start service-container">
+      <div class="col-lg-4 col-md-6 col-sm-12 pb-5 pt-3 align-items-center justify-content-start">
         <!-- Contenuto della colonna 2 -->
         <a href="{% url 'servizi_ambiente' %}" class="service-link">   
           <img
@@ -105,13 +105,13 @@
         </a>
       </div>
       <div
-        class="col-lg-4 col-md-6 col-sm-12 d-flex pb-5 pt-3 flex-column align-items-center justify-content-start service-container"
+        class="col-lg-4 col-md-6 col-sm-12 pb-5 pt-3 align-items-center justify-content-start"
       >
         <!-- Contenuto della colonna 3 -->
         <a href="{% url 'servizi_verde' %}" class="service-link">    
           <img
           class="img-fluid rounded-circle rounded-circle-green-border"
-          src="{% static 'assets/img/servizi_verde_pubblico.jpg' %}"
+          src="{% static 'assets/img/servizi_verde.jpg' %}"
           alt="An image of a field"
           style="width: 200px; height: 200px; object-fit: cover"
           />
@@ -119,12 +119,10 @@
         </a>
       </div>
       <!-- Aggiungi altre colonne se necessario -->
-    </div>
     <!-- Aggiungi altre righe se necessario -->
-    <div class="row">
       <!-- Contenuto della riga 2 -->
       <div
-        class="col-lg-4 col-md-6 col-sm-12 d-flex pb-5 pt-3 flex-column align-items-center justify-content-start service-container"
+        class="col-lg-4 col-md-6 col-sm-12 pb-5 pt-3 align-items-center justify-content-start"
       >
         <!-- Contenuto della colonna 1 -->
         <a href="{% url 'servizi_attivita' %}" class="service-link">    
@@ -140,7 +138,7 @@
         </a>
       </div>
       <div
-        class="col-lg-4 col-md-6 col-sm-12 d-flex pb-5 pt-3 flex-column align-items-center justify-content-start service-container"
+        class="col-lg-4 col-md-6 col-sm-12 pb-5 pt-3 align-items-center justify-content-start"
       >
         <!-- Contenuto della colonna 2 -->
         <a href="{% url 'servizi_certificazione' %}" class="service-link">    
@@ -156,7 +154,7 @@
         </a>
       </div>
       <div
-        class="col-lg-4 col-md-6 col-sm-12 d-flex pb-5 pt-3 flex-column align-items-center justify-content-start service-container"
+        class="col-lg-4 col-md-6 col-sm-12 pb-5 pt-3 align-items-center justify-content-start"
       >
         <!-- Contenuto della colonna 3 -->
         <a href="{% url 'servizi_economici' %}" class="service-link">    
@@ -171,8 +169,9 @@
       </a>
       <!-- Aggiungi altre colonne se necessario -->
     </div>
-    <!-- Aggiungi altre righe se necessario -->
   </div>
+
+    <!-- Aggiungi altre righe se necessario -->
 </section>
 
 
@@ -213,7 +212,7 @@
       <div class="col-lg-4 col-md-4 col-sm-12">
         <div class="row">
           {% for post in posts %}
-          <div class="col-lg-6 col-md-6 col-sm-3">
+          <div class="col-lg-6 col-md-6 col-sm-12">
             <div class="card mb-4">
               <a href="{% url 'blogpost_detail' id=post.id %}">
                 {% if post.image %}
