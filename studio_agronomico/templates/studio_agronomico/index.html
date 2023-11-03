@@ -14,7 +14,7 @@
       />
       <div class="container-full-width w centered">
         <h1>
-          Studio AgriPro
+          SISAN 
         </h1>
         <h3>Coltiviamo insieme un futuro migliore</h3>
       </div>
@@ -37,7 +37,7 @@
       <h1 class="text-center p-3">Chi siamo</h1>
       <div class="col-md-8 col-sm-6 pt-4 pb-5">
         <p>Il nostro obiettivo primario è colmare il divario di fiducia tra imprenditori e professionisti, costruendo un rapporto interdisciplinare che permetta di ottimizzare e valutare ogni aspetto di un'azienda agricola. Ci impegnamo a creare relazioni di connessione profonde e significative, contribuendo in modo tangibile al successo delle aziende agricole con cui collaboriamo.(!)</p>
-        <p>In quanto agricoltori in prima persona, comprendiamo le sfide e le esigenze specifiche delle diverse aziende agricole. Vogliamo condividiere le nostre competenze e conoscenze, oltre a mettere a disposizione i nostri strumenti, al fine di migliorare la produttività e la redditività delle aziende agricole con cui lavoriamo.(!)</p>
+        <p>Comprendiamo le sfide e le esigenze specifiche delle diverse aziende agricole. Vogliamo condividiere le nostre competenze e conoscenze, oltre a mettere a disposizione i nostri strumenti, al fine di migliorare la produttività e la redditività delle aziende agricole con cui lavoriamo.(!)</p>
         <p>Come ti aiutiamo? Ti offriamo l'opportunità di accedere alle informazioni più aggiornate del settore agricolo, inclusi i finanziamenti disponibili del settore agricolo (!). Inoltre, ti supportiamo nel collegare in modo completo la tua impresa agricola con tutte le figure professionali indispensabili per il raggiungimento dei tuoi obiettivi. Siamo qui per facilitare queste connessioni cruciali, creando un ambiente in cui le aziende agricole possono prosperare e crescere in modo sostenibile.</p>
         <!--Siamo una società di servizi costituita da una network di professionisti tra agronomi, geometri, architetti e imprenditori agricoli. Il nostro obiettivo primario è colmare il divario di fiducia tra imprenditori e professionisti. In quanto agricoltori in prima persona capiamo le necessità delle varie aziende agricole. <br> Vogliamo mettere a disposizione i nostri strumenti e le nostre conoscienze per far migliorare produttivamente e redditivamente le aziende che collaborano con noi.</p>
         <h4>Vantaggi:</h4>
@@ -174,41 +174,43 @@
     <!-- Aggiungi altre righe se necessario -->
 </section>
 
-
 <!-- NEWS -->
 <section id="news">  
   <!-- Contenitore con margine top bot e sfondo verdino -->
-  <div class="pt-5 lg-background">
+  <div class="pt-5 pb-4 lg-background">
     <h1 class="text-center pb-5">Bandi & News</h1>
     <!-- Prima Riga che contiene tutto -->
-    <div class="row ms-2 me-1">
       <!-- Colonna 1 variabile -->
-      <div class="col-lg-8 col-md-8 col-sm-12">
         <!-- Riga 1 Fissa -->
-        <div class="row">
-          {% for newPost in newPosts %}
+        <div class="row p-5">
+          {% for post in posts %}
           <!-- Due colonne sempre a meta della Riga 1 -->
           <div class="col-lg-6 col-md-6 col-sm-12">
             <div class="card mb-4">
-                <a href="{% url 'blogpost_detail' id=newPost.id %}">
-                    {% if newPost.image %}
-                    <img class="card-img-top" src="{{newPost.image.url}}" alt="..." />
+                <a href="{% url 'blogpost_detail' id=post.id %}">
+                    {% if post.image %}
+                    <img class="card-img-top" src="{{post.image.url}}" alt="..." />
                     {% else %}
                     <img class="card-img-top" src="https://dummyimage.com/850x350/dee2e6/6c757d.jpg" alt="..." />
                     {% endif %}
                 </a>
                 <div class="card-body">
                     <div class="small text-muted">January 1, 2023</div>
-                    <h2 class="card-title">{{newPost.title}}</h2>
-                    <p class="card-text truncate-text">{{newPost.desc|truncatechars:200}}</p>
-                    <a class="btn btn-primary" href="{% url 'blogpost_detail' id=newPost.id %}">Leggi di più →</a>
+                    <h2 class="card-title">{{post.title}}</h2>
+                    <p class="card-text truncate-text">{{post.desc|truncatechars:200}}</p>
+                    <a class="btn btn-primary" href="{% url 'blogpost_detail' id=post.id %}">Leggi di più →</a>
                 </div>
             </div>
           </div>
           {% endfor %}
         </div>
-      </div>
+        <div class="text-center">
+          <a href="{% url 'news' %}" class="btn btn-primary m-4 center">Tutti i bandi e le news!</a>
 
+        </div>
+
+      </div>
+      <!-- 
       <div class="col-lg-4 col-md-4 col-sm-12">
         <div class="row">
           {% for post in posts %}
@@ -223,25 +225,19 @@
               </a>
               <div class="card-body">
                 <div class="small text-muted truncate-text-container">January 1, 2023</div>
-                <h2 class="card-title h4 ">{{post.title}}</h2>
+                <h4 class="card-title ">{{post.title}}</h4>
                 <p class="card-text">{{post.desc|truncatechars:50}}</p>
                 <a class="btn btn-primary" href="{% url 'blogpost_detail' id=post.id %}">Leggi di più →</a>
               </div>
             </div>
           </div>
-          {% endfor %}
+          {% endfor %} 
         </div>
       </div>
-    </div>
-    <div class="container-full-width">
-      <a href="{% url 'news' %}" class="btn btn-primary m-4">Tutti i bandi e le news!</a>
-
-    </div>
-  </div>
-
+         -->
 </section>
 
-<!-- LAVORA CON NOI -->
+<!-- LAVORA CON NOI 
 <section id="lavora_con_noi">
 
   <div class="container-full-width">
@@ -258,17 +254,15 @@
   </div>
 
 </section>
+-->
 
 <!-- CONTATTI-->
 <section id="contattaci">
-    <header class="bg-light border">
-      <div class="container">
-        <h1 class="text-center p-3">Contattaci</h1>
-      </div>
-    </header>
-    <div id="sectionImg" class="pt-5">
+    <div id="sectionImg" class="pt-3 bg-light">
+      <h1 class="text-center p-4 ">Contattaci</h1>
+
     <div class="container">
-        <div class="row py-5">
+        <div class="row pb-5">
             <div class="col-md-8">
                 <form action="/post" method="post">
                     <input class="form-control" name="name" placeholder="Nome..." /><br />
@@ -279,12 +273,17 @@
                 </form>
             </div>
             <div class="col-md-4">
-                <b>Fabrizio Ciotti:</b> <br />
+                <b>Contatti telefonici:</b> <br />
+                <br />
                 Telefono: +39 327 9518741 <br />
-                E-mail: <a href="mailto:fabrizio.ciotti@gmail.com">fabrizio.ciotti@gmail.com</a><br />
+                E-mail: <a href="mailto:fabrizio.ciotti1@gmail.com">fabrizio.ciotti1@gmail.com</a><br />
                 Orario: 9:00 - 19:00 | Lun-Ven <br />
                 
                 <br /><br />
+
+                Telefono: +39 351 6126631 <br />
+                Orario: 9:00 - 19:00 | Lun-Ven <br />
+                
 
                 <!--<b>Matteo Marchetti:</b> <br />
                 Telefono: +39 328 9081775 <br />

@@ -17,12 +17,9 @@ def index(request):
     template = loader.get_template('studio_agronomico/index.html')
     
     #recupero i post in evidenza e no
-    posts = BlogPost.objects.filter(new=False)[:4]
-    newPosts = BlogPost.objects.filter(new=True)[:2]
-
+    posts = BlogPost.objects.all()
     context = {
             'posts' : posts,
-            'newPosts' : newPosts
         }
     
     return HttpResponse( template.render(context, request))
